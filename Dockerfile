@@ -44,6 +44,11 @@ libxslt1.1 \
 wrapsrv && \
 mkdir -p /mnt/media/playlists && \
 
+#acestream
+wget -o - http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
+tar -zxvf acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
+mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
+
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 
