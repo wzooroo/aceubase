@@ -51,6 +51,7 @@ mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
 
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
+mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
 
 # clean up
 apt-get clean && \
