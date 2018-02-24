@@ -1,7 +1,7 @@
 FROM phusion/baseimage:master
 
 # Set correct environment variables
-ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=de_DE.UTF-8 LANGUAGE=de_DE:en LC_ALL=de_DE.UTF-8
+ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:en LC_ALL=ru_RU.UTF-8
 WORKDIR /tmp
 # set ports
 EXPOSE 8621 62062 9944 9903 6878
@@ -16,7 +16,7 @@ CMD ["/sbin/my_init"]
 ADD src/ /root/
 
 # Set the locale
-RUN locale-gen de_DE.UTF-8 && \
+RUN locale-gen ru_RU.UTF-8 && \
 
 #set start file
 mv /root/start.sh /etc/my_init.d/start.sh && \
