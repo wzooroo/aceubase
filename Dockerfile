@@ -7,7 +7,7 @@ WORKDIR /tmp
 EXPOSE 8621 62062 9944 9903 6878
 
 # set config volume
-VOLUME /mnt/media/playlists/m3u
+VOLUME /mnt/media/playlists/
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
