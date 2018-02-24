@@ -55,7 +55,7 @@ mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
 
 # clean up
 apt-get clean && \
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/acestream/data/plugins/* \
 /usr/share/man /usr/share/groff /usr/share/info \
 /usr/share/lintian /usr/share/linda /var/cache/man && \
 (( find /usr/share/doc -depth -type f ! -name copyright|xargs rm || true )) && \
