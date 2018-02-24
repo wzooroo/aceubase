@@ -6,6 +6,9 @@ WORKDIR /tmp
 # set ports
 EXPOSE 8621 62062 9944 9903 6878
 
+# set config volume
+VOLUME /mnt/media/playlists/m3u
+
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
 
@@ -14,10 +17,6 @@ ADD src/ /root/
 
 # Set the locale
 RUN locale-gen de_DE.UTF-8 && \
-
-# Fix a Debianism of the nobody's uid being 65534
-usermod -u 99 nobody && \
-usermod -g 100 nobody && \
 
 #set start file
 mv /root/start.sh /etc/my_init.d/start.sh && \
