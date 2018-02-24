@@ -36,12 +36,8 @@ net-tools \
 psmisc \
 unzip \
 libpython2.7 \
-python-setuptools \
 python-m2crypto \
-python-apsw \
-python-m2ext \
-libxslt1.1 \ 
-wrapsrv && \
+python-apsw && \
 mkdir -p /mnt/media/playlists && \
 
 #acestream
