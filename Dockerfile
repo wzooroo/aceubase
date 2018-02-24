@@ -2,7 +2,7 @@ FROM phusion/baseimage:master
 
 # Set correct environment variables
 ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=de_DE.UTF-8 LANGUAGE=de_DE:en LC_ALL=de_DE.UTF-8
-
+WORKDIR /tmp
 # set ports
 EXPOSE 8621 62062 9944 9903 6878
 
@@ -56,3 +56,4 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/acestream/data/plugins/* \
 /usr/share/lintian /usr/share/linda /var/cache/man && \
 (( find /usr/share/doc -depth -type f ! -name copyright|xargs rm || true )) && \
 (( find /usr/share/doc -empty|xargs rmdir || true ))
+WORKDIR /
