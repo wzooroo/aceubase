@@ -32,7 +32,7 @@ mc \
 nano \
 net-tools \
 psmisc \
-unzip \
+htop \
 libpython2.7 \
 python-m2crypto \
 python-apsw && \
