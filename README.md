@@ -1,8 +1,4 @@
-# Ace Stream Media on the basis of A minimal Ubuntu base image modified for Docker-friendliness
-# версия: 3.1.16
-
-[![](https://badge.imagelayers.io/phusion/baseimage:latest.svg)](https://imagelayers.io/?images=phusion/baseimage:latest 'Get your own badge on imagelayers.io')
-[![Travis](https://img.shields.io/travis/phusion/baseimage-docker.svg)](https://travis-ci.org/phusion/baseimage-docker)
+# Ace Stream Media(v3.1.16) on the basis of A minimal Ubuntu base image modified for Docker-friendliness
 
 _Baseimage-docker only consumes 8.3 MB RAM and is much more powerful than Busybox or Alpine._
 
