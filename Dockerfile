@@ -47,8 +47,6 @@ mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
 
-WORKDIR /
-
 # clean up
 apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/acestream/data/plugins/* \
@@ -57,3 +55,4 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/acestream/data/plugins/* \
 find /usr/share/doc -depth -type f ! -name copyright|xargs rm -f || true )) && \
 find /usr/share/doc -empty|xargs rmdir || true ))
 
+WORKDIR /
