@@ -24,7 +24,6 @@ chmod +x /etc/my_init.d/start.sh && \
 
 # update apt and install dependencies
 apt-get update -y && \
-apt-get upgrade -y && \
 apt-get install -y \
 ca-certificates \
 supervisor \
