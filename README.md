@@ -35,11 +35,11 @@ http://ip.address.your.engine:6878/webui/app/69696969/settings/get
 Для того чтобы изменить их, на нужные Вам, делаем вот так в браузере... 
 ```
 Как пример если IP вашего девайса с движком - 192.168.1.35
-http://192.168.1.35:6878/webui/app/ReplaceMe/settings/set?live_buffer=25
-http://192.168.1.35:6878/webui/app/ReplaceMe/settings/set?vod_buffer=10
-http://192.168.1.35:6878/webui/app/ReplaceMe/settings/set?output_format_live=original
-http://192.168.1.35:6878/webui/app/ReplaceMe/settings/set?output_format_vod=hls
-http://192.168.1.35:6878/webui/app/ReplaceMe/settings/set?memory_cache_limit=314572800
+http://192.168.1.35:6878/webui/app/69696969/settings/set?live_buffer=25
+http://192.168.1.35:6878/webui/app/69696969/settings/set?vod_buffer=10
+http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_live=original
+http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_vod=hls
+http://192.168.1.35:6878/webui/app/69696969/settings/set?memory_cache_limit=314572800
 и т.д.
 ```
 
