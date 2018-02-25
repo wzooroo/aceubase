@@ -1,4 +1,4 @@
-# ![logo-text-test](https://user-images.githubusercontent.com/24189833/36645710-3deca456-1a6d-11e8-8bf0-84f078703d8d.png)Ace Stream Media(v3.1.16) on the basis of A minimal Ubuntu base image modified for Docker-friendliness
+# ![logo-text-test](https://user-images.githubusercontent.com/24189833/36645710-3deca456-1a6d-11e8-8bf0-84f078703d8d.png) Media(v3.1.16) on the basis of A minimal Ubuntu base image modified for Docker-friendliness
 
 _Baseimage-docker only consumes 8.3 MB RAM and is much more powerful than Busybox or Alpine._
 
