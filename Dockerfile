@@ -53,6 +53,6 @@ apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/acestream/data/plugins/* \
 /usr/share/man /usr/share/groff /usr/share/info \
 /usr/share/lintian /usr/share/linda /var/cache/man && \
-(( find /usr/share/doc -depth -type f ! -name copyright|xargs rm || true )) && \
-(( find /usr/share/doc -empty|xargs rmdir || true ))
+find /usr/share/doc -depth -type f ! -name copyright|xargs rm -f || true )) && \
+find /usr/share/doc -empty|xargs rmdir || true ))
 WORKDIR /
