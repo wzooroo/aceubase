@@ -26,3 +26,7 @@ http://ip.address.your.engine:9944/app/monitor
 ```
 ![aceu4](https://user-images.githubusercontent.com/24189833/36640896-9a4430a2-1a27-11e8-821e-d325a9c33b92.png)
 
+# Для того чтобы получить список текущих значений надо набрать в адресной строке Вашего браузера
+```
+http://ip.address.your.engine:6878/webui/app/69696969/settings/get
+```
