@@ -39,7 +39,7 @@ python-pip && \
 pip install --upgrade pip && \
 pip install psutil --upgrade && \
 pip install gevent --upgrade && \
-apt-get purge python-pip && \
+apt-get purge python-pip -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/media/playlists && \
 mkdir -p /mnt/films&& \
