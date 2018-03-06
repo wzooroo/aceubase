@@ -4,7 +4,7 @@ FROM phusion/baseimage:master
 ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:en LC_ALL=ru_RU.UTF-8
 WORKDIR /tmp
 # set ports
-EXPOSE 8621 62062 9944 9903 6878
+EXPOSE 8621 62062 9944 9903 6878 8000
 
 # set config volume
 VOLUME /mnt/media/playlists/
