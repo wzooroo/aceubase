@@ -8,6 +8,7 @@ EXPOSE 8621 62062 9944 9903 6878
 
 # set config volume
 VOLUME /mnt/media/playlists/
+VOLUME /mnt/films/
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
@@ -33,8 +34,15 @@ net-tools \
 htop \
 libpython2.7 \
 python-m2crypto \
-python-apsw && \
+python-apsw \
+python-pip && \
+pip install --upgrade pip && \
+pip install psutil --upgrade && \
+pip install gevent --upgrade && \
+apt-get purge python-pip && \
+apt-get autoremove -y && \
 mkdir -p /mnt/media/playlists && \
+mkdir -p /mnt/films&& \
 
 #acestream
 wget -o - http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
