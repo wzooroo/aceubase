@@ -49,6 +49,10 @@ wget -o - http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar
 tar -zxvf acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
 mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
 
+# install aceproxy
+wget -o - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
+unzip aceproxy.zip -d /opt/tv && \
+
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
