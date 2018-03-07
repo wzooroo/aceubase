@@ -61,3 +61,7 @@ crontab -e
 0 */6 * * * curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=192.168.178.92:6878 > /dev/null 2>&1
 @reboot sleep 20 && curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=192.168.178.92:6878 > /dev/null 2>&1
 ```
+плейлиста будет доступен по этому адресу:
+```
+http://192.168.178.92:8844/aceall.m3u
+```
