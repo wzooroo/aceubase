@@ -46,3 +46,7 @@ http://192.168.1.35:6878/webui/app/69696969/settings/set?memory_cache_limit=3145
 
 # Получение плейлиста .m3u <900 каналов)
 
+заходим в контейнер
+```
+docker exec -it aceub /bin/bash
+```
