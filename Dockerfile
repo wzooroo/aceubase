@@ -32,6 +32,7 @@ mc \
 nano \
 net-tools \
 htop \
+nginx \
 libpython2.7 \
 python-m2crypto \
 python-apsw \
