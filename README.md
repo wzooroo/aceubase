@@ -43,13 +43,21 @@ http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_vod=hls
 http://192.168.1.35:6878/webui/app/69696969/settings/set?memory_cache_limit=314572800
 и т.д.
 ```
-
-# Получение плейлиста .m3u <900 каналов)
-
+# Насройка HTTPAceProxy 
 заходим в контейнер:
 ```
 docker exec -it aceub /bin/bash
 ```
+редактируем следующее:
+```
+root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/modules/playlist.py
+root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/torrenttv_api.py
+root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrenttv.py
+root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
+root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
+```
+
+# Получение плейлиста .m3u <900 каналов)
 запустить в кроне:
 ```
 crontab -e
