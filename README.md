@@ -46,7 +46,18 @@ http://192.168.1.35:6878/webui/app/69696969/settings/set?memory_cache_limit=3145
 
 # Получение плейлиста .m3u <900 каналов)
 
-заходим в контейнер
+заходим в контейнер:
 ```
 docker exec -it aceub /bin/bash
+```
+запустить в кроне:
+```
+crontab -e
+```
+добавить в низ это содержание:
+```
+0 */2 * * * find /opt/state/.ACEStream/.acestream_cache/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
+0 */2 * * * find /opt/state/.ACEStream/collected_torrent_files/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
+0 */6 * * * curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=192.168.178.92:6878 > /dev/null 2>&1
+@reboot sleep 20 && curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=192.168.178.92:6878 > /dev/null 2>&1
 ```
