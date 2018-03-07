@@ -43,7 +43,7 @@ http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_vod=hls
 http://192.168.1.35:6878/webui/app/69696969/settings/set?memory_cache_limit=314572800
 и т.д.
 ```
-# Насройка HTTPAceProxy 
+# Настройка HTTPAceProxy 
 заходим в контейнер:
 ```
 docker exec -it aceub /bin/bash
