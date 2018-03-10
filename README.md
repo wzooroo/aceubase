@@ -63,6 +63,10 @@ http://ip:8000/torrenttv/playlist.m3u
 http://ip:8000/channels/?type=m3u
 http://ip:8000/archive/dates/?days=1 #(требуется доустановить ffmpeg)
 ```
+![screenshot_20180310-221041](https://user-images.githubusercontent.com/24189833/37247827-fb046c5a-24c1-11e8-913a-173867f0cb64.png)
+![screenshot_20180310-221051](https://user-images.githubusercontent.com/24189833/37247828-fb1ffc72-24c1-11e8-9225-fe2d93954b2f.png)
+![screenshot_20180310-221116](https://user-images.githubusercontent.com/24189833/37247829-fb38e020-24c1-11e8-9027-554f04bc9145.png)
+![screenshot_20180310-221124](https://user-images.githubusercontent.com/24189833/37247830-fb5205e6-24c1-11e8-8568-bdfccd109671.png)
 
 
 # Получение альтернативного плейлиста .m3u <900 каналов), Фильмотеки из 2860 фильмов по жанрам + чистка кеш файлов старше чем 5 минут
