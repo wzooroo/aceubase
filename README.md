@@ -58,10 +58,10 @@ root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
 ```
 Для получения плейлиста, используйте ссылки вида:
 ```
-http://127.0.0.1:8000/torrenttv
-http://127.0.0.1:8000/torrenttv/playlist.m3u
-http://127.0.0.1:8000/channels/?type=m3u
-http://127.0.0.1:8000/archive/dates/?days=1 #(требуется доустановить ffmpeg)
+http://ip:8000/torrenttv
+http://ip:8000/torrenttv/playlist.m3u
+http://ip:8000/channels/?type=m3u
+http://ip:8000/archive/dates/?days=1 #(требуется доустановить ffmpeg)
 ```
 
 
@@ -74,10 +74,12 @@ crontab -e
 ```
 0 */2 * * * find /opt/state/.ACEStream/.acestream_cache/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
 0 */2 * * * find /opt/state/.ACEStream/collected_torrent_files/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
-0 */6 * * * curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=127.0.0.1:6878 > /dev/null 2>&1
-@reboot sleep 20 && curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=127.0.0.1:6878 > /dev/null 2>&1
+0 */6 * * * curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=ip:6878 > /dev/null 2>&1
+@reboot sleep 20 && curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=ip:6878 > /dev/null 2>&1
+curl -f -s -k -L -o /var/www/html/films.m3u http://roof.pythonanywhere.com/playlist/lists/?ip='ваш ip' > /dev/null 2>&1
 ```
-плейлист будет доступен по этому адресу:
+плейлисты будут доступны по этим адресам:
 ```
-http://127.0.0.1:8844/aceall.m3u  # если порт 80 пробросить на 8844!
+http://ip:8844/aceall.m3u  # если порт 80 пробросить на 8844!
+http://ip:8844/films.m3u
 ```
