@@ -43,7 +43,7 @@ pip install gevent --upgrade && \
 apt-get purge python-pip -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/media/playlists && \
-mkdir -p /mnt/films&& \
+mkdir -p /mnt/films && \
 
 #acestream
 wget -o - http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
@@ -57,6 +57,9 @@ unzip aceproxy.zip -d /opt/ && \
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
+
+# set /tmp on tmpfs
+echo "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0" | tee -a /etc/fstab
 
 # clean up
 apt-get clean && \
