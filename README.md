@@ -78,8 +78,8 @@ crontab -e
 
 добавить в низ это содержание:
 ```
-0 */2 * * * find /opt/state/.ACEStream/.acestream_cache/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
-0 */2 * * * find /opt/state/.ACEStream/collected_torrent_files/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
+0 */2 * * * find /tmp/state/.ACEStream/.acestream_cache/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
+0 */2 * * * find /tmp/state/.ACEStream/collected_torrent_files/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
 0 */6 * * * curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=ip:6878 > /dev/null 2>&1
 @reboot sleep 20 && curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=ip:6878 > /dev/null 2>&1
 0 */9 * * * curl -f -s -k -L -o /var/www/html/films.m3u http://roof.pythonanywhere.com/playlist/lists/?ip='ваш ip' > /dev/null 2>&1
