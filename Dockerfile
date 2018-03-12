@@ -1,7 +1,7 @@
 FROM phusion/baseimage
 
 # Set correct environment variables
-ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:en LC_ALL=ru_RU.UTF-8
+ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:ru LC_ALL=ru_RU.UTF-8
 WORKDIR /tmp
 # set ports
 EXPOSE 8621 62062 9944 9903 6878 8000 80
@@ -44,6 +44,7 @@ apt-get purge python-pip -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/media/playlists && \
 mkdir -p /mnt/films && \
+mkdir -p /opt/tv && \
 
 #acestream
 wget -o - http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
@@ -52,7 +53,7 @@ mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
 
 # install aceproxy
 wget -o - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
-unzip aceproxy.zip -d /opt/ && \
+unzip aceproxy.zip -d /opt/tv/ && \
 
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
