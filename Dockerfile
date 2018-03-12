@@ -7,7 +7,6 @@ WORKDIR /tmp
 EXPOSE 8621 62062 9944 9903 6878 8000 80
 
 # set config volume
-VOLUME /mnt/media/playlists/
 VOLUME /mnt/films/
 
 # Use baseimage-docker's init system
@@ -42,9 +41,7 @@ pip install psutil --upgrade && \
 pip install gevent --upgrade && \
 apt-get purge python-pip -y && \
 apt-get autoremove -y && \
-mkdir -p /mnt/media/playlists && \
 mkdir -p /mnt/films && \
-mkdir -p /opt/tv && \
 
 #acestream
 wget -o - http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
@@ -53,7 +50,7 @@ mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
 
 # install aceproxy
 wget -o - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
-unzip aceproxy.zip -d /opt/tv/ && \
+unzip aceproxy.zip -d /opt/ && \
 
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
