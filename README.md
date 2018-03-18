@@ -90,3 +90,4 @@ crontab -e
 http://ip:8844/aceall.m3u  # если порт nginx 80 пробросить на 8844!
 http://ip:8844/films.m3u
 ```
+# tail -f -n 5 /var/log/supervisor/acehttp.log
