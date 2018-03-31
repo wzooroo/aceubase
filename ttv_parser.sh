@@ -30,8 +30,8 @@ size=`echo $data |$parser  '.channels|length'`
 if [ $size -gt 1 ]
 then
   param="'.channels|=sort_by(.cat,.name)|.channels[]|select(.cat != \"$informational\")|\"#EXTINF:-1 group-title=\\\"\"+.cat+\"\\\" tvg-logo=\\\"$serverip/tv/\"+.name+\".png\\\", \"+.name+\"$newline\"+\"$url_prefix\"+.url+\"$url_postfix\"'|sed 's/$newline/\n/g'"
-  eval "echo \$header; echo \$data | " $parser "-r" $param > $outdir/as.kodi.m3u
+  eval "echo \$header; echo \$data | " $parser "-r" $param > $outdir/tv.m3u
 
 #  param="'.channels|=sort_by(.cat,.name)|.channels[]|select(.cat != \"$informational\")|\"#EXTINF:-1, \"+.name+\" (\"+.cat+\")$newline\"+\"$url_prefix\"+.url+\"$url_postfix\"'|sed 's/$newline/\n/g'"
-#  eval "echo \$header; echo \$data | " $parser "-r" $param > $outdir/as.m3u
+#  eval "echo \$header; echo \$data | " $parser "-r" $param > $outdir/tv1.m3u
 fi
