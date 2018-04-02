@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 FNAME="tv.m3u"
 URL="http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=192.168.178.92:6878"
