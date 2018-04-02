@@ -89,6 +89,7 @@ crontab -e
 плейлисты будут доступны по этим адресам:
 ```
 http://ip:8844/aceall.m3u  # если порт nginx 80 пробросить на 8844!
+http://ip:8844/tv.m3u
 http://ip:8844/films.m3u
 ```
 ![img_0227](https://user-images.githubusercontent.com/24189833/38192537-ab2c6094-366d-11e8-8434-ac44922a1d11.JPG)
