@@ -83,6 +83,7 @@ crontab -e
 0 */6 * * * curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=ip:6878 > /dev/null 2>&1
 @reboot sleep 20 && curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=ip:6878 > /dev/null 2>&1
 0 */9 * * * curl -f -s -k -L -o /var/www/html/films.m3u http://roof.pythonanywhere.com/playlist/lists/?ip='ваш ip' > /dev/null 2>&1
+0 */6 * * * cd /var/www/html/ && ./scan-m3u.sh
 ```
 
 плейлисты будут доступны по этим адресам:
