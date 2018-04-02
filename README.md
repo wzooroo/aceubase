@@ -94,7 +94,7 @@ http://ip:8844/films.m3u
 
 # Логи
 
-в  # HTTPAceProxy/aceconfig.py правим строчку 140 на:
+в HTTPAceProxy/aceconfig.py правим строчку 140 на:
 ```
 logfile = "/var/log/supervisor/acehttp.log"
 ```
