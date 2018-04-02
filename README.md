@@ -103,7 +103,7 @@ logfile = "/var/log/supervisor/acehttp.log"
 будет доступно по ссылкам:
 
 ```
-http://ip::9903/logtail/acestream # аналог в терминале tail -f -n 5 /var/log/supervisor/acestream.log
-http://ip::9903/logtail/acehttp # аналог в терминале tail -f -n 5 /var/log/supervisor/acehttp.log
+http://ip::9903/logtail/acestream # аналог в терминале tail -f -n 0 /var/log/supervisor/acestream.log
+http://ip::9903/logtail/acehttp # аналог в терминале tail -f -n 0 /var/log/supervisor/acehttp.log
 ```
 
