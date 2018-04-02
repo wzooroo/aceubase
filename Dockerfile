@@ -57,8 +57,6 @@ mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
 mv /root/scan-m3u.sh /var/www/html/scan-m3u.sh && \
 chmod +x /var/www/html/scan-m3u.sh && \
-cd /var/www/html/ && ./scan-m3u.sh && \
-
 
 # set /tmp on tmpfs
 echo "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0" | tee -a /etc/fstab && \
