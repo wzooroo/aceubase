@@ -51,7 +51,7 @@ root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrenttv.py
 root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
 root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
 ```
-Для получения плейлиста, используйте ссылки вида:
+# Для получения плейлиста, используйте ссылки вида:
 ```
 http://ip:8000/torrenttv
 http://ip:8000/torrenttv/playlist.m3u
@@ -75,16 +75,15 @@ crontab -e
 ```
 0 */2 * * * find /tmp/state/.ACEStream/.acestream_cache/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
 0 */2 * * * find /tmp/state/.ACEStream/collected_torrent_files/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
-0 */6 * * * curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=ip:6878 > /dev/null 2>&1
-@reboot sleep 20 && curl -f -s -k -L -o /var/www/html/aceall.m3u http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.all.iproxy.m3u?ip=ip:6878 > /dev/null 2>&1
+0 */6 * * * cd /var/www/html/ && ./scan-m3u.sh > /dev/null 2>&1
+@reboot sleep 20 && cd /var/www/html/ && ./scan-m3u.sh > /dev/null 2>&1
 0 */9 * * * curl -f -s -k -L -o /var/www/html/films.m3u http://roof.pythonanywhere.com/playlist/lists/?ip='ваш ip' > /dev/null 2>&1
-0 */6 * * * cd /var/www/html/ && ./scan-m3u.sh
+
 ```
 
 плейлисты будут доступны по этим адресам:
 ```
-http://ip:8844/aceall.m3u  # если порт nginx 80 пробросить на 8844!
-http://ip:8844/tv.m3u
+http://ip:8844/tv.m3u         # если порт nginx 80 пробросить на 8844!
 http://ip:8844/films.m3u
 ```
 ![img_0227](https://user-images.githubusercontent.com/24189833/38192537-ab2c6094-366d-11e8-8434-ac44922a1d11.JPG)
@@ -101,8 +100,7 @@ logfile = "/var/log/supervisor/acehttp.log"
 http://ip::9903/logtail/acestream # аналог в терминале tail -f -n 0 /var/log/supervisor/acestream.log
 http://ip::9903/logtail/acehttp # аналог в терминале tail -f -n 0 /var/log/supervisor/acehttp.log
 ```
-# Опционально
-# Доступ в Веб-Интерфейс
+# Опционально: Доступ в Веб-Интерфейс
 Движок запускается с дополнительным ключом --access-token "some_token" (по умолчанию "access token" генерируется случайным образом при каждом запуске движка).
 После этого веб-интерфейс будет доступен по ссылке: "http://host:6878/webui/app/69696969/server". После первоначальной настройки сводящейся в задании пароля, веб-интерфейс будет уже доступен по этой ссылке: "http://host:6878/server"
 ![916_12](https://user-images.githubusercontent.com/24189833/36639742-7690df16-1a13-11e8-8a34-fc2d6b7a4200.png)
