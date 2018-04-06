@@ -33,6 +33,8 @@ net-tools \
 htop \
 nginx \
 libpython2.7 \
+python-setuptools \
+python-libxslt1 \
 python-m2crypto \
 python-apsw \
 python-pip && \
