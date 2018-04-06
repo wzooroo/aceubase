@@ -3,7 +3,7 @@ serverip="http://127.0.0.1"
 
 path=`dirname $0`
 parser="/usr/bin/jq"
-filepath="/mnt/media/playlists"
+filepath="/var/www/html/"
 
 playlist_url="http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.json"
 json="$filepath/m3u/ttv.json"
