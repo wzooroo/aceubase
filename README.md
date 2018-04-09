@@ -45,7 +45,7 @@ docker exec -it aceub /bin/bash
 ```
 редактируем следующее:
 ```
-root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/modules/playlist.py
+root@aceub:/# nano /opt/HTTPAceProxy-master/modules/playlist.py
 root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/torrenttv_api.py
 root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrenttv.py
 root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
