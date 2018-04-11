@@ -14,30 +14,6 @@ You can use it as a base for your own Docker images.
 Baseimage-docker is available for pulling from [the Docker registry](https://registry.hub.docker.com/u/phusion/baseimage/)!
 
 Ace Stream – это медиа-платформа с децентрализованной/распределенной системой поставки и хранения мультимедийных данных, предназначенная для создания интернет-сервисов с функциями AVoD (Аудио и Видео по Запросу) и Live Streaming («живого»/потокового вещания), с обширной социальной и интерактивной составляющей.
-
-# Для того чтобы посмотреть текущее состояние движка надо набрать в адресной строке Вашего браузера
-
-```
-http://ip.address.your.engine:9944/app/monitor
-```
-![aceu4](https://user-images.githubusercontent.com/24189833/36640896-9a4430a2-1a27-11e8-821e-d325a9c33b92.png)
-
-# Для того чтобы получить список текущих значений надо набрать в адресной строке Вашего браузера
-```
-http://ip.address.your.engine:6878/webui/app/69696969/settings/get
-```
-![aceu4a](https://user-images.githubusercontent.com/24189833/36641002-381b6538-1a29-11e8-8c1f-aa7953b7c5ec.png)
-
-Для того чтобы изменить их, на нужные Вам, делаем вот так в браузере... 
-```
-Как пример если IP вашего девайса с движком - 192.168.1.35
-http://192.168.1.35:6878/webui/app/69696969/settings/set?live_buffer=25
-http://192.168.1.35:6878/webui/app/69696969/settings/set?vod_buffer=10
-http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_live=original
-http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_vod=hls
-http://192.168.1.35:6878/webui/app/69696969/settings/set?memory_cache_limit=314572800
-и т.д.
-```
 # Настройка HTTPAceProxy 
 заходим в контейнер:
 ```
@@ -62,8 +38,6 @@ http://ip:8000/archive/dates/?days=1 #(требуется доустановит
 ![screenshot_20180310-221051](https://user-images.githubusercontent.com/24189833/37247828-fb1ffc72-24c1-11e8-9225-fe2d93954b2f.png)
 ![screenshot_20180310-221116](https://user-images.githubusercontent.com/24189833/37247829-fb38e020-24c1-11e8-9027-554f04bc9145.png)
 ![screenshot_20180310-221124](https://user-images.githubusercontent.com/24189833/37247830-fb5205e6-24c1-11e8-8568-bdfccd109671.png)
-
-
 # Получение альтернативного плейлиста .m3u <900 каналов), Фильмотеки из 2860 фильмов по жанрам + чистка кеш файлов старше чем 5 минут
 
 запустить в кроне:
@@ -99,6 +73,30 @@ logfile = "/var/log/supervisor/acehttp.log"
 ```
 http://ip::9903/logtail/acestream # аналог в терминале tail -f -n 0 /var/log/supervisor/acestream.log
 http://ip::9903/logtail/acehttp # аналог в терминале tail -f -n 0 /var/log/supervisor/acehttp.log
+```
+
+# Для того чтобы посмотреть текущее состояние движка надо набрать в адресной строке Вашего браузера
+
+```
+http://ip.address.your.engine:9944/app/monitor
+```
+![aceu4](https://user-images.githubusercontent.com/24189833/36640896-9a4430a2-1a27-11e8-821e-d325a9c33b92.png)
+
+# Для того чтобы получить список текущих значений надо набрать в адресной строке Вашего браузера
+```
+http://ip.address.your.engine:6878/webui/app/69696969/settings/get
+```
+![aceu4a](https://user-images.githubusercontent.com/24189833/36641002-381b6538-1a29-11e8-8c1f-aa7953b7c5ec.png)
+
+Для того чтобы изменить их, на нужные Вам, делаем вот так в браузере... 
+```
+Как пример если IP вашего девайса с движком - 192.168.1.35
+http://192.168.1.35:6878/webui/app/69696969/settings/set?live_buffer=25
+http://192.168.1.35:6878/webui/app/69696969/settings/set?vod_buffer=10
+http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_live=original
+http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_vod=hls
+http://192.168.1.35:6878/webui/app/69696969/settings/set?memory_cache_limit=314572800
+и т.д.
 ```
 # Опционально: Доступ в Веб-Интерфейс
 Движок запускается с дополнительным ключом --access-token "some_token" (по умолчанию "access token" генерируется случайным образом при каждом запуске движка).
