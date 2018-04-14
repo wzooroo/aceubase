@@ -41,7 +41,7 @@ net-tools \
 htop \
 nginx && \
 wget -O get-pip.py https://bootstrap.pypa.io/get-pip.py && \
-python2 get-pip.py && \
+python get-pip.py && \
 pip install --upgrade pip && \
 pip install psutil && \
 pip install gevent && \
