@@ -14,7 +14,7 @@ You can use it as a base for your own Docker images.
 Baseimage-docker is available for pulling from [the Docker registry](https://registry.hub.docker.com/u/phusion/baseimage/)!
 
 Ace Stream – это медиа-платформа с децентрализованной/распределенной системой поставки и хранения мультимедийных данных, предназначенная для создания интернет-сервисов с функциями AVoD (Аудио и Видео по Запросу) и Live Streaming («живого»/потокового вещания), с обширной социальной и интерактивной составляющей.
-# Настройка HTTPAceProxy 
+## Настройка HTTPAceProxy 
 заходим в контейнер:
 ```
 docker exec -it aceub /bin/bash
