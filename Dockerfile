@@ -27,22 +27,21 @@ add-apt-repository ppa:jonathonf/python-2.7 -y && \
 add-apt-repository ppa:jonathonf/python-3.6 -y && \
 apt-get update -y && \
 apt-get install -y \
+python2.7 \
+gcc \
+python-devel \
+python-pip \
+python-setuptools \
+python-libxslt1 \
+python-m2crypto \
+python-apsw \
 supervisor \
 wget \
 mc \
 nano \
 net-tools \
 htop \
-nginx \
-python2.7 \
-python-dev \
-python-setuptools \
-gcc \
-python-libxslt1 \
-python-m2crypto \
-python-apsw \
-python-pip && \
-apt-get update -y && \
+nginx && \
 pip install --upgrade pip && \
 pip install psutil && \
 pip install psutil --upgrade && \
