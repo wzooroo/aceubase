@@ -44,6 +44,7 @@ python-apsw \
 python-pip && \
 apt-get update -y && \
 pip install --upgrade pip && \
+pip install psutil && \
 pip install psutil --upgrade && \
 pip install gevent --upgrade && \
 apt-get purge python-pip python-dev gcc -y && \
