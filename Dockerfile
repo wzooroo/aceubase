@@ -32,7 +32,7 @@ nano \
 net-tools \
 htop \
 nginx \
-libpython2.7 \
+python2.7 \
 python-dev \
 python-setuptools \
 gcc \
