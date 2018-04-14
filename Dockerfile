@@ -24,13 +24,11 @@ chmod +x /etc/my_init.d/start.sh && \
 
 # update apt and install dependencies
 add-apt-repository ppa:jonathonf/python-2.7 -y && \
-add-apt-repository ppa:jonathonf/python-3.6 -y && \
 apt-get update -y && \
 apt-get install -y \
 python2.7 \
 gcc \
 python-dev \
-python-pip \
 python-setuptools \
 python-libxslt1 \
 python-m2crypto \
@@ -42,10 +40,11 @@ nano \
 net-tools \
 htop \
 nginx && \
+wget -O get-pip.py https://bootstrap.pypa.io/get-pip.py && \
+python2 get-pip.py && \
 pip install --upgrade pip && \
 pip install psutil && \
-pip install psutil --upgrade && \
-pip install gevent --upgrade && \
+pip install gevent && \
 apt-get purge python-pip python-dev gcc -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
