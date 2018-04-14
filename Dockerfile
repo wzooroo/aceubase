@@ -33,9 +33,9 @@ net-tools \
 htop \
 nginx \
 libpython2.7 \
-gcc \
 python-dev \
 python-setuptools \
+gcc \
 python-libxslt1 \
 python-m2crypto \
 python-apsw \
