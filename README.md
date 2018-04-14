@@ -15,11 +15,11 @@ Baseimage-docker is available for pulling from [the Docker registry](https://reg
 
 Ace Stream – это медиа-платформа с децентрализованной/распределенной системой поставки и хранения мультимедийных данных, предназначенная для создания интернет-сервисов с функциями AVoD (Аудио и Видео по Запросу) и Live Streaming («живого»/потокового вещания), с обширной социальной и интерактивной составляющей.
 ## Настройка HTTPAceProxy 
-заходим в контейнер:
+#### заходим в контейнер:
 ```
 docker exec -it aceub /bin/bash
 ```
-редактируем следующее:
+#### редактируем следующее:
 
 * root@aceub:/# nano /opt/HTTPAceProxy-master/modules/playlist.py
 * root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/torrenttv_api.py
@@ -40,7 +40,7 @@ docker exec -it aceub /bin/bash
 ![screenshot_20180310-221124](https://user-images.githubusercontent.com/24189833/37247830-fb5205e6-24c1-11e8-8568-bdfccd109671.png)
 ## Получение альтернативного плейлиста .m3u <900 каналов), Фильмотеки из 2860 фильмов по жанрам + чистка кеш файлов старше чем 5 минут
 
-### запустить в кроне:
+#### запустить в кроне:
 ```
 crontab -e
 ```
@@ -55,26 +55,26 @@ crontab -e
 
 ```
 
-плейлисты будут доступны по этим адресам:
+#### плейлисты будут доступны по этим адресам:
 ```
 http://ip:8844/tv.m3u         # если порт nginx 80 пробросить на 8844!
 http://ip:8844/films.m3u
 ```
 ![img_0227](https://user-images.githubusercontent.com/24189833/38192537-ab2c6094-366d-11e8-8434-ac44922a1d11.JPG)
 
-# Логи
+## Логи
 
-в HTTPAceProxy/aceconfig.py правим строчку 140 на:
+#### в HTTPAceProxy/aceconfig.py правим строчку 140 на:
 ```
 logfile = "/var/log/supervisor/acehttp.log"
 ```
-будет доступно по ссылкам:
+#### будет доступно по ссылкам:
 
 ```
 http://ip::9903/logtail/acestream # аналог в терминале tail -f -n 0 /var/log/supervisor/acestream.log
 http://ip::9903/logtail/acehttp # аналог в терминале tail -f -n 0 /var/log/supervisor/acehttp.log
 ```
-# Опционально: Доступ в Веб-Интерфейс
+### Опционально: Доступ в Веб-Интерфейс
 Движок запускается с дополнительным ключом --access-token "some_token" (по умолчанию "access token" генерируется случайным образом при каждом запуске движка).
 После этого веб-интерфейс будет доступен по ссылке: "http://host:6878/webui/app/69696969/server". После первоначальной настройки сводящейся в задании пароля, веб-интерфейс будет уже доступен по этой ссылке: "http://host:6878/server"
 ![916_12](https://user-images.githubusercontent.com/24189833/36639742-7690df16-1a13-11e8-8a34-fc2d6b7a4200.png)
