@@ -40,12 +40,12 @@ docker exec -it aceub /bin/bash
 ![screenshot_20180310-221124](https://user-images.githubusercontent.com/24189833/37247830-fb5205e6-24c1-11e8-8568-bdfccd109671.png)
 ## Получение альтернативного плейлиста .m3u <900 каналов), Фильмотеки из 2860 фильмов по жанрам + чистка кеш файлов старше чем 5 минут
 
-###запустить в кроне:
+### запустить в кроне:
 ```
 crontab -e
 ```
 
-####добавить в низ это содержание:
+#### добавить в низ это содержание:
 ```
 0 */2 * * * find /tmp/state/.ACEStream/.acestream_cache/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
 0 */2 * * * find /tmp/state/.ACEStream/collected_torrent_files/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
