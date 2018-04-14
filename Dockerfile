@@ -23,8 +23,8 @@ mv /root/start.sh /etc/my_init.d/start.sh && \
 chmod +x /etc/my_init.d/start.sh && \
 
 # update apt and install dependencies
-apt-get update -y && \
 add-apt-repository ppa:jonathonf/python-2.7 -y && \
+add-apt-repository ppa:jonathonf/python-3.6 -y && \
 apt-get update -y && \
 apt-get install -y \
 supervisor \
