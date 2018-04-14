@@ -29,7 +29,7 @@ apt-get update -y && \
 apt-get install -y \
 python2.7 \
 gcc \
-python-devel \
+python-dev \
 python-pip \
 python-setuptools \
 python-libxslt1 \
