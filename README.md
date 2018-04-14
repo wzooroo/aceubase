@@ -27,25 +27,25 @@ docker exec -it aceub /bin/bash
 * root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
 * root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
 
-# Для получения плейлиста, используйте ссылки вида:
+### Для получения плейлиста, используйте ссылки вида:
 
 * http://ip:8000/torrenttv
 * http://ip:8000/torrenttv/playlist.m3u
 * http://ip:8000/channels/?type=m3u
 * http://ip:8000/archive/dates/?days=1 #(требуется доустановить ffmpeg)
 
-# Полная совместимость и поддержка офф. виджета ттв
+### Полная совместимость и поддержка офф. виджета ттв
 ![screenshot_20180310-221051](https://user-images.githubusercontent.com/24189833/37247828-fb1ffc72-24c1-11e8-9225-fe2d93954b2f.png)
 ![screenshot_20180310-221116](https://user-images.githubusercontent.com/24189833/37247829-fb38e020-24c1-11e8-9027-554f04bc9145.png)
 ![screenshot_20180310-221124](https://user-images.githubusercontent.com/24189833/37247830-fb5205e6-24c1-11e8-8568-bdfccd109671.png)
-# Получение альтернативного плейлиста .m3u <900 каналов), Фильмотеки из 2860 фильмов по жанрам + чистка кеш файлов старше чем 5 минут
+## Получение альтернативного плейлиста .m3u <900 каналов), Фильмотеки из 2860 фильмов по жанрам + чистка кеш файлов старше чем 5 минут
 
-запустить в кроне:
+###запустить в кроне:
 ```
 crontab -e
 ```
 
-добавить в низ это содержание:
+####добавить в низ это содержание:
 ```
 0 */2 * * * find /tmp/state/.ACEStream/.acestream_cache/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
 0 */2 * * * find /tmp/state/.ACEStream/collected_torrent_files/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
