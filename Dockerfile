@@ -27,9 +27,10 @@ add-apt-repository ppa:jonathonf/python-2.7 -y && \
 apt-get update -y && \
 apt-get install -y \
 python2.7 \
-gcc \
+build-essential \
 python-dev \
 python-setuptools \
+gcc \
 python-libxslt1 \
 python-m2crypto \
 python-apsw \
@@ -42,7 +43,7 @@ net-tools \
 htop \
 nginx && \
 pip install --upgrade pip && \
-pip install psutil && \
+pip install --upgrade psutil && \
 pip install gevent && \
 apt-get purge python-pip python-dev gcc -y && \
 apt-get autoremove -y && \
