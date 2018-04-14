@@ -34,6 +34,7 @@ htop \
 nginx \
 libpython2.7 \
 gcc \
+python-dev \
 python-setuptools \
 python-libxslt1 \
 python-m2crypto \
@@ -42,7 +43,7 @@ python-pip && \
 pip install --upgrade pip && \
 pip install psutil --upgrade && \
 pip install gevent --upgrade && \
-apt-get purge python-pip -y && \
+apt-get purge python-pip python-dev gcc -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
