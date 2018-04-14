@@ -21,11 +21,11 @@ docker exec -it aceub /bin/bash
 ```
 редактируем следующее:
 ```
-root@aceub:/# nano /opt/HTTPAceProxy-master/modules/playlist.py
-root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/torrenttv_api.py
-root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrenttv.py
-root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
-root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
+* root@aceub:/# nano /opt/HTTPAceProxy-master/modules/playlist.py
+* root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/torrenttv_api.py
+* root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrenttv.py
+* root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
+* root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
 ```
 # Для получения плейлиста, используйте ссылки вида:
 ```
@@ -73,30 +73,6 @@ logfile = "/var/log/supervisor/acehttp.log"
 ```
 http://ip::9903/logtail/acestream # аналог в терминале tail -f -n 0 /var/log/supervisor/acestream.log
 http://ip::9903/logtail/acehttp # аналог в терминале tail -f -n 0 /var/log/supervisor/acehttp.log
-```
-
-# Для того чтобы посмотреть текущее состояние движка надо набрать в адресной строке Вашего браузера
-
-```
-http://ip.address.your.engine:9944/app/monitor
-```
-![aceu4](https://user-images.githubusercontent.com/24189833/36640896-9a4430a2-1a27-11e8-821e-d325a9c33b92.png)
-
-# Для того чтобы получить список текущих значений надо набрать в адресной строке Вашего браузера
-```
-http://ip.address.your.engine:6878/webui/app/69696969/settings/get
-```
-![aceu4a](https://user-images.githubusercontent.com/24189833/36641002-381b6538-1a29-11e8-8c1f-aa7953b7c5ec.png)
-
-Для того чтобы изменить их, на нужные Вам, делаем вот так в браузере... 
-```
-Как пример если IP вашего девайса с движком - 192.168.1.35
-http://192.168.1.35:6878/webui/app/69696969/settings/set?live_buffer=25
-http://192.168.1.35:6878/webui/app/69696969/settings/set?vod_buffer=10
-http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_live=original
-http://192.168.1.35:6878/webui/app/69696969/settings/set?output_format_vod=hls
-http://192.168.1.35:6878/webui/app/69696969/settings/set?memory_cache_limit=314572800
-и т.д.
 ```
 # Опционально: Доступ в Веб-Интерфейс
 Движок запускается с дополнительным ключом --access-token "some_token" (по умолчанию "access token" генерируется случайным образом при каждом запуске движка).
