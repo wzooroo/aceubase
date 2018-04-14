@@ -24,6 +24,8 @@ chmod +x /etc/my_init.d/start.sh && \
 
 # update apt and install dependencies
 apt-get update -y && \
+add-apt-repository ppa:jonathonf/python-2.7 -y && \
+apt-get update -y && \
 apt-get install -y \
 supervisor \
 wget \
@@ -40,6 +42,7 @@ python-libxslt1 \
 python-m2crypto \
 python-apsw \
 python-pip && \
+apt-get update -y && \
 pip install --upgrade pip && \
 pip install psutil --upgrade && \
 pip install gevent --upgrade && \
