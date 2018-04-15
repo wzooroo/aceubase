@@ -29,7 +29,7 @@ docker exec -it aceub /bin/bash
 * root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
 * root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
 #### после редактирования
-![aceu1](https://user-images.githubusercontent.com/24189833/38779661-a701889c-40cb-11e8-8432-aba46ab2c5e7.png)
+![aceu1a](https://user-images.githubusercontent.com/24189833/38780048-583d0820-40d1-11e8-9635-779b2afb618a.png)
 
 ### Для получения плейлиста, используйте ссылки вида:
 
