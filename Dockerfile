@@ -27,6 +27,8 @@ apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
 add-apt-repository ppa:jonathonf/python-2.7 -y && \
 apt-get update -y && \
 apt-get install -y \
+build-essential \
+python-dev \
 python2.7 \
 python-setuptools \
 gcc \
@@ -41,11 +43,8 @@ nano \
 net-tools \
 htop \
 nginx && \
-pip install --upgrade pip && \
+#pip install --upgrade pip && \
 pip install --upgrade setuptools && \
-apt-get install -y \
-build-essential \
-python-dev && \
 pip install --upgrade psutil && \
 pip install --upgrade gevent && \
 apt-get purge python-pip python-dev gcc -y && \
