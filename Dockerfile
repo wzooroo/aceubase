@@ -27,14 +27,12 @@ add-apt-repository ppa:jonathonf/python-2.7 -y && \
 apt-get update -y && \
 apt-get install -y \
 python2.7 \
-build-essential \
-python-dev \
 python-setuptools \
 gcc \
+python-pip \
 python-libxslt1 \
 python-m2crypto \
 python-apsw \
-python-pip \
 supervisor \
 wget \
 mc \
@@ -43,8 +41,11 @@ net-tools \
 htop \
 nginx && \
 pip install --upgrade pip && \
+apt-get install -y \
+build-essential \
+python-dev && \
 pip install --upgrade psutil && \
-pip install gevent && \
+pip install --upgrade gevent && \
 apt-get purge python-pip python-dev gcc -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
