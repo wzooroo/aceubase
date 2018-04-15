@@ -43,11 +43,11 @@ nano \
 net-tools \
 htop \
 nginx && \
-#pip install --upgrade pip && \
+pip install -U pip && \
 pip install --upgrade setuptools && \
 pip install --upgrade psutil && \
 pip install --upgrade gevent && \
-apt-get purge python-pip python-dev gcc -y && \
+apt-get purge python-pip python-dev gcc build-essential python-setuptools -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
