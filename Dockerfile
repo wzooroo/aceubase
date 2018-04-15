@@ -27,11 +27,11 @@ chmod +x /etc/my_init.d/start.sh && \
 add-apt-repository ppa:jonathonf/python-2.7 -y && \
 apt-get update -y && \
 apt-get install -y \
-#build-essential \
-#python-dev \
+build-essential \
+python-dev \
 python2.7 \
 #python-setuptools \
-#gcc \
+gcc \
 #python-pip \
 curl \
 python-libxslt1 \
@@ -46,7 +46,7 @@ htop \
 nginx && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
-pip install -U pip && \
+#pip install -U pip && \
 #pip install --upgrade setuptools && \
 pip install --upgrade psutil && \
 pip install --upgrade gevent && \
