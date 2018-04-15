@@ -15,6 +15,7 @@ Baseimage-docker is available for pulling from [the Docker registry](https://reg
 
 Ace Stream – это медиа-платформа с децентрализованной/распределенной системой поставки и хранения мультимедийных данных, предназначенная для создания интернет-сервисов с функциями AVoD (Аудио и Видео по Запросу) и Live Streaming («живого»/потокового вещания), с обширной социальной и интерактивной составляющей.
 ## Настройка HTTPAceProxy 
+![aceu](https://user-images.githubusercontent.com/24189833/38779611-0ccc2372-40cb-11e8-94c1-2ba325a14481.png)
 #### заходим в контейнер:
 ```
 docker exec -it aceub /bin/bash
