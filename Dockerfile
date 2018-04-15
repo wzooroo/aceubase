@@ -62,7 +62,7 @@ unzip aceproxy.zip -d /opt/ && \
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
 mv /root/scan-m3u.sh /var/www/html/scan-m3u.sh && \
-mv /root/F1HDTV 1080i, TS H.264[rutracker-5539046].torrent /mnt/films/F1HDTV 1080i, TS H.264[rutracker-5539046].torrent
+mv /root/F1HDTV 1080i, TS H.264[rutracker-5539046].torrent /mnt/films/F1HDTV 1080i, TS H.264[rutracker-5539046].torrent && \
 chmod +x /var/www/html/scan-m3u.sh && \
 
 # set /tmp on tmpfs
