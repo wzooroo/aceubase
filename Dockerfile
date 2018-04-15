@@ -45,7 +45,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
 pip install --upgrade psutil && \
 pip install --upgrade gevent && \
-apt-get purge python-pip python-setuptools python-wheel python-dev gcc build-essential -y && \
+apt-get purge pip setuptools wheel python-dev gcc build-essential -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
