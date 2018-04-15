@@ -25,6 +25,7 @@ chmod +x /etc/my_init.d/start.sh && \
 # update apt and install dependencies
 add-apt-repository ppa:jonathonf/python-2.7 -y && \
 apt-get update -y && \
+apt update -y && \
 apt-get install -y \
 python2.7 \
 python-setuptools \
@@ -41,6 +42,7 @@ net-tools \
 htop \
 nginx && \
 pip install --upgrade pip && \
+pip install --upgrade setuptools && \
 apt-get install -y \
 build-essential \
 python-dev && \
