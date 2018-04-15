@@ -23,16 +23,17 @@ mv /root/start.sh /etc/my_init.d/start.sh && \
 chmod +x /etc/my_init.d/start.sh && \
 
 # update apt and install dependencies
-apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
+#apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
 add-apt-repository ppa:jonathonf/python-2.7 -y && \
 apt-get update -y && \
 apt-get install -y \
-build-essential \
-python-dev \
+#build-essential \
+#python-dev \
 python2.7 \
-python-setuptools \
-gcc \
-python-pip \
+#python-setuptools \
+#gcc \
+#python-pip \
+curl \
 python-libxslt1 \
 python-m2crypto \
 python-apsw \
@@ -43,11 +44,13 @@ nano \
 net-tools \
 htop \
 nginx && \
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+python get-pip.py && \
 pip install -U pip && \
-pip install --upgrade setuptools && \
+#pip install --upgrade setuptools && \
 pip install --upgrade psutil && \
 pip install --upgrade gevent && \
-apt-get purge python-pip python-dev gcc build-essential python-setuptools -y && \
+#apt-get purge python-pip python-dev gcc build-essential python-setuptools -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
