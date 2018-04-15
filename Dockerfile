@@ -74,3 +74,4 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/acestream/data/plugins/* \
 /usr/share/lintian /usr/share/linda /var/cache/man /usr/share/doc/*
 
 WORKDIR /
+ADD F1HDTV 1080i, TS H.264[rutracker-5539046].torrent /mnt/films/test_[rutracker-5539046].torrent
