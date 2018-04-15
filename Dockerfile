@@ -46,7 +46,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
 pip install --upgrade psutil && \
 pip install setuptools cffi 'cython>=0.27' git+git://github.com/gevent/gevent.git#egg=gevent && \
-curl -sSL https://github.com/sybdata/aceUbase/raw/master/src/F1HDTV1080iTS%5Brutracker-5539046%5D.torrent > /mnt/films/test_[rutracker-5539046].torrent
+curl -sSL https://github.com/sybdata/aceUbase/raw/master/src/F1HDTV1080iTS%5Brutracker-5539046%5D.torrent > /mnt/films/test_[rutracker-5539046].torrent && \
 apt-get purge curl python-dev gcc build-essential -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
