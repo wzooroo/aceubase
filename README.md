@@ -14,7 +14,8 @@ You can use it as a base for your own Docker images.
 Baseimage-docker is available for pulling from [the Docker registry](https://registry.hub.docker.com/u/phusion/baseimage/)!
 
 Ace Stream – это медиа-платформа с децентрализованной/распределенной системой поставки и хранения мультимедийных данных, предназначенная для создания интернет-сервисов с функциями AVoD (Аудио и Видео по Запросу) и Live Streaming («живого»/потокового вещания), с обширной социальной и интерактивной составляющей.
-## Настройка HTTPAceProxy 
+## Настройка HTTPAceProxy
+#### состояние из коробки
 ![aceu](https://user-images.githubusercontent.com/24189833/38779611-0ccc2372-40cb-11e8-94c1-2ba325a14481.png)
 #### заходим в контейнер:
 ```
@@ -27,6 +28,8 @@ docker exec -it aceub /bin/bash
 * root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrenttv.py
 * root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
 * root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
+#### после редактирования
+![aceu1](https://user-images.githubusercontent.com/24189833/38779661-a701889c-40cb-11e8-8432-aba46ab2c5e7.png)
 
 ### Для получения плейлиста, используйте ссылки вида:
 
