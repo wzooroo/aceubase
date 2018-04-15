@@ -30,9 +30,7 @@ apt-get install -y \
 build-essential \
 python-dev \
 python2.7 \
-#python-setuptools \
 gcc \
-#python-pip \
 curl \
 python-libxslt1 \
 python-m2crypto \
@@ -46,11 +44,9 @@ htop \
 nginx && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
-#pip install -U pip && \
-#pip install --upgrade setuptools && \
 pip install --upgrade psutil && \
 pip install --upgrade gevent && \
-#apt-get purge python-pip python-dev gcc build-essential python-setuptools -y && \
+apt-get purge python-pip python-setuptools python-wheel python-dev gcc build-essential -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
