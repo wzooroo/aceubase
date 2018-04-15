@@ -23,9 +23,9 @@ mv /root/start.sh /etc/my_init.d/start.sh && \
 chmod +x /etc/my_init.d/start.sh && \
 
 # update apt and install dependencies
+apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
 add-apt-repository ppa:jonathonf/python-2.7 -y && \
 apt-get update -y && \
-apt update -y && \
 apt-get install -y \
 python2.7 \
 python-setuptools \
