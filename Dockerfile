@@ -44,6 +44,7 @@ htop \
 nginx && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
+pip install --upgrade b2 && \
 pip install --upgrade psutil && \
 pip install setuptools cffi 'cython>=0.27' git+git://github.com/gevent/gevent.git#egg=gevent && \
 apt-get purge git python-dev gcc build-essential -y && \
