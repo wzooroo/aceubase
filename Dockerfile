@@ -42,7 +42,7 @@ wget && \
 wget https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz && \
 tar xzf Python-2.7.15.tgz && \
 cd Python-2.7.15 && ./configure --enable-optimizations && \
-make altinstall -y && \
+make altinstall && \
 #python2.7 \
 apt-get install -y \
 gcc \
