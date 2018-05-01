@@ -24,28 +24,12 @@ chmod +x /etc/my_init.d/start.sh && \
 
 # update apt and install dependencies
 apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
-#add-apt-repository ppa:jonathonf/python-2.7 -y && \
-#apt-get update -y && \
+add-apt-repository ppa:jonathonf/python-2.7 -y && \
+apt-get update -y && \
 apt-get install -y \
 build-essential \
-checkinstall \
-libreadline-gplv2-dev \
-libncursesw5-dev \
-libssl-dev \
-libsqlite3-dev \
-tk-dev \
-libgdbm-dev \
-libc6-dev \
-libbz2-dev \
 python-dev \
-wget && \
-wget https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz && \
-tar xzf Python-2.7.15.tgz && \
-cd Python-2.7.15 && ./configure --prefix=/tmp/python-2.7.15 --enable-shared --enable-optimizations && \
-make && \
-make install && \
-#python2.7 \
-apt-get install -y \
+python2.7 \
 gcc \
 curl \
 psmisc \
@@ -53,7 +37,7 @@ python-libxslt1 \
 python-m2crypto \
 python-apsw \
 supervisor \
-#wget \
+wget \
 git \
 mc \
 nano \
@@ -66,7 +50,7 @@ pip install --upgrade b2 && \
 pip install speedtest-cli && \
 pip install --upgrade psutil && \
 pip install setuptools cffi 'cython>=0.27' git+git://github.com/gevent/gevent.git#egg=gevent && \
-apt-get purge git checkinstall python-dev gcc build-essential libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev -y && \
+apt-get purge git python-dev gcc build-essential -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
