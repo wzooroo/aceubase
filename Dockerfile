@@ -29,6 +29,8 @@ apt-get update -y && \
 apt-get install -y \
 build-essential \
 python-dev \
+swig \
+libssl-dev \
 python2.7 \
 gcc \
 curl \
@@ -46,12 +48,13 @@ htop \
 nginx && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
-pip install --user https://github.com/rogerbinns/apsw/releases/download/3.22.0-r1/apsw-3.22.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.22.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions
+pip install --upgrade M2Crypto && \
+pip install --user https://github.com/rogerbinns/apsw/releases/download/3.22.0-r1/apsw-3.22.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.22.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
 pip install --upgrade b2 && \
 pip install speedtest-cli && \
 pip install --upgrade psutil && \
 pip install setuptools cffi 'cython>=0.27' git+git://github.com/gevent/gevent.git#egg=gevent && \
-apt-get purge git python-dev gcc build-essential -y && \
+apt-get purge git python-dev gcc build-essential swig libssl-dev -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
