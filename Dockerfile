@@ -42,6 +42,7 @@ mc \
 nano \
 net-tools \
 iputils-ping \
+tzdata \
 htop \
 nginx && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
