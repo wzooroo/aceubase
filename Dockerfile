@@ -56,7 +56,7 @@ curl https://gist.githubusercontent.com/danmackinlay/176149/raw/d60b505a585dda83
 chmod +x /etc/init.d/supervisord && \
 update-rc.d supervisord defaults && \
 service supervisord stop && \
-apt-get purge git python-pip python-dev gcc build-essential -y && \
+apt-get purge git python-dev gcc build-essential -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
