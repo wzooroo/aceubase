@@ -31,6 +31,7 @@ build-essential \
 python-dev \
 python2.7 \
 gcc \
+supervisor \
 curl \
 psmisc \
 python-libxslt1 \
