@@ -32,6 +32,9 @@ email = 're.place@me'
 password ='ReplaceMe'
 ```
 * root@aceub:/# nano /opt/HTTPAceProxy-master/modules/playlist.py
+строчки 28 и 30
+
+
 ### Полная совместимость и поддержка офф. виджета ттв
 ### Для получения плейлиста, используйте ссылки вида:
 * http://ip:8000/channels/?type=m3u
