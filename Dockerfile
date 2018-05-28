@@ -46,12 +46,17 @@ tzdata \
 htop && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
+pip install --upgrade supervisor && \
 pip install --user https://github.com/rogerbinns/apsw/releases/download/3.22.0-r1/apsw-3.22.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.22.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
 pip install --upgrade b2 && \
 pip install speedtest-cli && \
 pip install --upgrade psutil && \
 pip install setuptools cffi 'cython>=0.27' git+git://github.com/gevent/gevent.git#egg=gevent && \
-apt-get purge git python-dev gcc build-essential -y && \
+curl https://gist.githubusercontent.com/danmackinlay/176149/raw/d60b505a585dda836fadecca8f6b03884153196b/supervisord.sh > /etc/init.d/supervisord && \
+chmod +x /etc/init.d/supervisord && \
+update-rc.d supervisord defaults && \
+service supervisord stop && \
+apt-get purge git pip python-dev gcc build-essential -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
