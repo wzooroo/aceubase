@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec /usr/bin/supervisord
+exec /etc/init.d/supervisord start
