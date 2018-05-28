@@ -35,7 +35,6 @@ curl \
 psmisc \
 python-libxslt1 \
 python-m2crypto \
-supervisor \
 wget \
 git \
 mc \
@@ -47,6 +46,7 @@ htop \
 nginx && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
+pip install --upgrade supervisor && \
 pip install --user https://github.com/rogerbinns/apsw/releases/download/3.22.0-r1/apsw-3.22.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.22.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
 pip install --upgrade b2 && \
 pip install speedtest-cli && \
