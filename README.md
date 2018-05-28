@@ -23,6 +23,13 @@ docker exec -it <имя контейнера> /bin/bash
 ```
 #### редактируем следующее:
 * root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
+строчки 19 и 20
+```
+#Insert your email on torrent-tv.ru here
+email = 're.place@me'
+#Insert your torrent-tv account password
+password ='ReplaceMe'
+```
 * root@aceub:/# nano /opt/HTTPAceProxy-master/modules/playlist.py
 ### Полная совместимость и поддержка офф. виджета ттв
 ### Для получения плейлиста, используйте ссылки вида:
