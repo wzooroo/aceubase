@@ -4,7 +4,7 @@ FROM phusion/baseimage
 ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:ru LC_ALL=ru_RU.UTF-8
 WORKDIR /tmp
 # set ports
-EXPOSE 8621 62062 9944 9903 6878 8000 80
+EXPOSE 8621 62062 9944 9903 6878 8000
 
 # set config volume
 VOLUME /mnt/films/
@@ -42,8 +42,7 @@ nano \
 net-tools \
 iputils-ping \
 tzdata \
-htop \
-nginx && \
+htop && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
 pip install --upgrade supervisor && \
@@ -68,8 +67,6 @@ unzip aceproxy.zip -d /opt/ && \
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
-mv /root/scan-m3u.sh /var/www/html/scan-m3u.sh && \
-chmod +x /var/www/html/scan-m3u.sh && \
 
 # set /tmp on tmpfs
 echo "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0" | tee -a /etc/fstab && \
