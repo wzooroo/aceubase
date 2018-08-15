@@ -1,0 +1,43 @@
+%page
+%center
+%back "blue", fore "red", size 6, vgap 40, center
+Der Tux
+%bar "yellow"
+%fore "yellow", size 5, center
+Sie spielt in einem Land das weit ab von jeder Zivilisation liegt! In der Eis und Schnee den gesamten Erdboden bedecken!
+Eisige Winde fegen über das vereiste Land Unix,
+und wer keinen warmen Pelz hat ist hier nicht wirklich glücklich in der Gegend!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%center
+%fore "red", size 6, vgap 40, center
+Der Tux
+%bar "yellow"
+%fore "yellow", size 5, center
+Hier in dem Land Unix gibt es einen kleinen Ort namens Kernelhausen.
+Kernelhausen ist ein kleines verträumtes Städtchen in dem ein kleiner Pinguin namens Tux lebt!
+Tux ist kein wahnsinnig begehrter Pinguin, er ist eher unscheinbar und klein doch er hat ungeahnte Kräfte.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%center
+%fore "red", size 6, vgap 40, center
+Der Tux
+%bar "yellow"
+%fore "yellow", size 5, center
+Der kleine Tux ist auch nicht wirklich bei jedermann beliebt, was ihn eigentlich sehr kränkt, doch er lässt es sich nicht anmerken und versucht seinen Wünschen und Träumen treu zu bleiben!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%center
+%fore "red", size 6, vgap 40, center
+Der Tux
+%bar "yellow"
+%fore "yellow", size 5, center
+Das kleine Land Unix hat aber einen Widersacher Bill, der dem Land Unix seine Erfolge und seine stabile Wirtschaftslage nicht gönnt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%center
+%fore "red", size 6, vgap 40, center
+Der Tux
+%bar "yellow"
+%fore "yellow", size 5, center
+%image "tux-large.jpg"
