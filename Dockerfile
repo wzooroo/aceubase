@@ -47,7 +47,7 @@ htop && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
 pip install --upgrade supervisor && \
-pip install --user https://github.com/rogerbinns/apsw/releases/download/3.24.1-r1/apsw-3.24.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.24.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
+pip install --user https://github.com/rogerbinns/apsw/releases/download/3.24.0-r1/apsw-3.24.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.24.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
 pip install --upgrade b2 && \
 pip install speedtest-cli && \
 pip install --upgrade psutil && \
