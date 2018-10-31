@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM phusion/baseimage:master
 
 # Set correct environment variables
 ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:ru LC_ALL=ru_RU.UTF-8
