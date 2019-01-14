@@ -13,9 +13,6 @@ Ace Stream – это медиа-платформа с децентрализо�
 docker run -d --net=host --privileged --name=ace86u --restart=always -e TZ=Europe/Berlin sybdata/aceubase:v3133.1
 ```
  #### где:
-
-  * 69696969 это ключ --access-token для веб сервера http://ip:6878/webui/app/69696969/server
-  * 600 - Время очистки кеша acestream в секундах
   * TZ='timezone'
 
 ### Настройка HTTPAceProxy
