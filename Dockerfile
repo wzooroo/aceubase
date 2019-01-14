@@ -28,12 +28,7 @@ mv acestream.engine/ /opt/ && \
 
 # install aceproxy
 wget -O - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
-unzip aceproxy.zip -d /opt/ && \
-
-# set /tmp on tmpfs
-sed -i '$atmpfs /tmp tmpfs defaults,noatime,nosuid,nodev,noexec,mode=1777 0 0' /etc/fstab && \
-sed -i '$atmpfs /var/tmp tmpfs defaults,noatime,nosuid,nodev,noexec,mode=1777 0 0' /etc/fstab && \
-mount -a && \
+unzip aceproxy.zip -d /opt/ 
 
 # cleanup
 rm -rf acestream_3.1.33.1_x86_wbUI.tar.gz aceproxy.zip
