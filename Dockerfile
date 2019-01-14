@@ -36,7 +36,7 @@ sed -i '$atmpfs /var/tmp tmpfs defaults,noatime,nosuid,nodev,noexec,mode=1777 0 
 mount -a && \
 
 # cleanup
- rm -rf acestream_3.1.33.1_x86_wbUI.tar.gz aceproxy.zip
+rm -rf acestream_3.1.33.1_x86_wbUI.tar.gz aceproxy.zip
 
 # add local files
 COPY root/ /
