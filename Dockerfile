@@ -1,5 +1,7 @@
 FROM ubuntu:disco
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # set ports
 EXPOSE 8621 62062 6878 8000
 
@@ -16,6 +18,8 @@ nano \
 tzdata \
 htop \
 wget && \
+ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime && \
+dpkg-reconfigure --frontend noninteractive tzdata && \
 pip3 install --upgrade psutil && \
 pip3 install --upgrade gevent && \
 apt-get autoremove -y && \
