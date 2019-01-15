@@ -16,6 +16,7 @@ python3 \
 python3-pip \
 nano \
 tzdata \
+unzip \
 htop \
 wget && \
 ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime && \
