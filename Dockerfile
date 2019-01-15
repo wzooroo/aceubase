@@ -28,7 +28,7 @@ mv acestream.engine/ /opt/ && \
 
 # install aceproxy
 wget -O - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
-unzip aceproxy.zip -d /opt/ 
+unzip aceproxy.zip -d /opt/ && \
 
 # cleanup
 rm -rf acestream_3.1.33.1_x86_wbUI.tar.gz aceproxy.zip
