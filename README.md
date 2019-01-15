@@ -1,4 +1,11 @@
 # AceStream + HTTPAceProxy
+
+### Supported tags and respective Dockerfile links
+* v3133.1 ([x86_64//Dockerfile](https://github.com/sybdata/proxyAlpine/blob/acey/Dockerfile)) # AceStreamMOD v3133.1
+* latest ([x86_64//Dockerfile](https://github.com/sybdata/proxyAlpine/blob/jaceproxy/Dockerfile))![logo-text-test](https://user-images.githubusercontent.com/24189833/36645710-3deca456-1a6d-11e8-8bf0-84f078703d8d.png) (v3.1.16) 
+
+
+
 ==========================
 ### ![logo-text-test](https://user-images.githubusercontent.com/24189833/36645710-3deca456-1a6d-11e8-8bf0-84f078703d8d.png) (v3.1.33.1)&#174; https://web.telegram.org/#/im?p=@AceStreamMOD + HTTPAceProxy&#174; https://github.com/pepsik-kiev/HTTPAceProxy
 
