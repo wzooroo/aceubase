@@ -38,7 +38,7 @@ email = 're.place@me'
 #Insert your torrent-tv account password
 password ='ReplaceMe'
 ```
-### Полная совместимость и поддержка офф. виджета ттв
+### Полная совместимость и поддержка офф. виджета ттв(+архив)
 ### Для получения плейлиста, используйте ссылки вида:
 * http://ip:8000/channels/?type=m3u
 * http://ip:8000/channels/?group=3&type=m3u
