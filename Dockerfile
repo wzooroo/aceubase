@@ -3,7 +3,7 @@ FROM ubuntu:disco
 ENV DEBIAN_FRONTEND=noninteractive
 
 # set ports
-EXPOSE 8621 62062 6878 8000
+EXPOSE 8621 6878 8000
 
 # set config volume
 VOLUME /mnt/films/
