@@ -4,7 +4,7 @@ FROM phusion/baseimage
 ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:ru LC_ALL=ru_RU.UTF-8
 WORKDIR /tmp
 # set ports
-EXPOSE 8621 62062 9944 9903 6878 8000
+EXPOSE 8621 62062 6878 8000
 
 # set config volume
 VOLUME /mnt/films/
@@ -47,11 +47,11 @@ htop && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
 pip install --upgrade supervisor && \
-pip install --user https://github.com/rogerbinns/apsw/releases/download/3.23.1-r1/apsw-3.23.1-r1.zip --global-option=fetch --global-option=--version --global-option=3.23.1 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
+pip install --user https://github.com/rogerbinns/apsw/releases/download/3.26.0-r1/apsw-3.26.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.26.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
 pip install --upgrade b2 && \
 pip install speedtest-cli && \
 pip install --upgrade psutil && \
-pip install setuptools cffi 'cython>=0.27' git+git://github.com/gevent/gevent.git#egg=gevent && \
+pip install setuptools cffi 'cython>=0.28' git+git://github.com/gevent/gevent.git#egg=gevent && \
 curl https://gist.githubusercontent.com/danmackinlay/176149/raw/d60b505a585dda836fadecca8f6b03884153196b/supervisord.sh > /etc/init.d/supervisord && \
 chmod +x /etc/init.d/supervisord && \
 update-rc.d supervisord defaults && \
