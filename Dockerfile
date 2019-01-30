@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM phusion/baseimage:master
 
 # Set correct environment variables
 ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:ru LC_ALL=ru_RU.UTF-8
@@ -24,34 +24,34 @@ chmod +x /etc/my_init.d/start.sh && \
 
 # update apt and install dependencies
 apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
-add-apt-repository ppa:jonathonf/python-2.7 -y && \
-apt-get update -y && \
+#add-apt-repository ppa:jonathonf/python-2.7 -y && \
+#apt-get update -y && \
 apt-get install -y \
 build-essential \
 python-dev \
-python2.7 \
+python3 \
 gcc \
 supervisor \
 curl \
 psmisc \
-python-libxslt1 \
-python-m2crypto \
+#python-libxslt1 \
+#python-m2crypto \
 wget \
 git \
 mc \
 nano \
-net-tools \
-iputils-ping \
+#net-tools \
+#iputils-ping \
 tzdata \
 htop && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-python get-pip.py && \
-pip install --upgrade supervisor && \
-pip install --user https://github.com/rogerbinns/apsw/releases/download/3.26.0-r1/apsw-3.26.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.26.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
-pip install --upgrade b2 && \
-pip install speedtest-cli && \
-pip install --upgrade psutil && \
-pip install setuptools cffi 'cython>=0.28' git+git://github.com/gevent/gevent.git#egg=gevent && \
+python3 get-pip.py && \
+pip3 install --upgrade supervisor && \
+pip3 install --user https://github.com/rogerbinns/apsw/releases/download/3.26.0-r1/apsw-3.26.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.26.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
+pip3 install --upgrade b2 && \
+pip3 install speedtest-cli && \
+pip3 install --upgrade psutil && \
+pip3 install setuptools cffi 'cython>=0.28' git+git://github.com/gevent/gevent.git#egg=gevent && \
 curl https://gist.githubusercontent.com/danmackinlay/176149/raw/d60b505a585dda836fadecca8f6b03884153196b/supervisord.sh > /etc/init.d/supervisord && \
 chmod +x /etc/init.d/supervisord && \
 update-rc.d supervisord defaults && \
