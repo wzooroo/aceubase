@@ -52,7 +52,6 @@ pip3 install --upgrade b2 && \
 pip3 install speedtest-cli && \
 pip3 install --upgrade psutil && \
 pip3 install setuptools cffi 'cython>=0.28' git+git://github.com/gevent/gevent.git#egg=gevent && \
-curl https://gist.githubusercontent.com/danmackinlay/176149/raw/d60b505a585dda836fadecca8f6b03884153196b/supervisord.sh > /etc/init.d/supervisord && \
 apt-get purge git python-dev gcc build-essential python3-distutils -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
