@@ -38,7 +38,7 @@ mkdir -p /mnt/films && \
 #acestream
 wget -o - http://acestream.org/downloads/linux-beta/acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz && \
 tar -zxvf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz && \
-mv acestream_3.1.35_ubuntu_18.04_x86_64 /opt/acestream && \
+#mv acestream_3.1.35_ubuntu_18.04_x86_64 /opt/acestream && \
 
 # install aceproxy
 wget -o - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
@@ -49,7 +49,7 @@ echo "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0" | tee -a /etc/fstab && \
 
 # clean up
 apt-get clean && \
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/acestream/data/plugins/* \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 /usr/share/man /usr/share/groff /usr/share/info \
 /usr/share/lintian /usr/share/linda /var/cache/man /usr/share/doc/*
 
