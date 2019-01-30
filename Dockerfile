@@ -61,9 +61,9 @@ apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
 #acestream
-wget -o - http://dl.acestream.org/linux/acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
-tar -zxvf acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
-mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
+wget -o - http://acestream.org/downloads/linux-beta/acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz && \
+tar -zxvf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz && \
+mv acestream_3.1.35_ubuntu_18.04_x86_64 /opt/acestream && \
 
 # install aceproxy
 wget -o - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
