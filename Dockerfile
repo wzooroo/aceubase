@@ -10,7 +10,7 @@ EXPOSE 8621 62062 6878 8000
 VOLUME /mnt/films/
 
 # Use baseimage-docker's init system
-CMD ["/opt/acestream.engine/start.sh"]
+CMD ["/sbin/my_init"]
 
 # Add required files that are local
 ADD src/ /root/
