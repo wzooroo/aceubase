@@ -66,10 +66,6 @@ mv acestream_3.1.35_ubuntu_18.04_x86_64 /opt/acestream && \
 wget -o - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
 unzip aceproxy.zip -d /opt/ && \
 
-# set supervisor file
-mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
-mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
-
 # set /tmp on tmpfs
 echo "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0" | tee -a /etc/fstab && \
 
