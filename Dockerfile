@@ -24,33 +24,14 @@ chmod +x /etc/my_init.d/start.sh && \
 
 # update apt and install dependencies
 apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
-#add-apt-repository ppa:jonathonf/python-2.7 -y && \
-#apt-get update -y && \
 apt-get install -y \
-build-essential \
-python-dev \
-python3-distutils \
 python3 \
-gcc \
 curl \
-psmisc \
-#python-libxslt1 \
-#python-m2crypto \
 wget \
-git \
 mc \
 nano \
-#net-tools \
-#iputils-ping \
 tzdata \
 htop && \
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-python3 get-pip.py && \
-pip3 install --upgrade b2 && \
-pip3 install speedtest-cli && \
-pip3 install --upgrade psutil && \
-pip3 install setuptools cffi 'cython>=0.28' git+git://github.com/gevent/gevent.git#egg=gevent && \
-apt-get purge git python-dev gcc build-essential python3-distutils -y && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
