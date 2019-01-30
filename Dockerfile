@@ -29,6 +29,7 @@ apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
 apt-get install -y \
 build-essential \
 python-dev \
+python3-distutils \
 python3 \
 gcc \
 supervisor \
