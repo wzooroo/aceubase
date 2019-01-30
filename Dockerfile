@@ -46,7 +46,6 @@ tzdata \
 htop && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python3 get-pip.py && \
-pip3 install --user https://github.com/rogerbinns/apsw/releases/download/3.26.0-r1/apsw-3.26.0-r1.zip --global-option=fetch --global-option=--version --global-option=3.26.0 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
 pip3 install --upgrade b2 && \
 pip3 install speedtest-cli && \
 pip3 install --upgrade psutil && \
