@@ -42,10 +42,13 @@ tar -zxvf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz && \
 wget -o - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
 unzip aceproxy.zip && \
 
+# set /tmp on tmpfs
+echo "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0" | tee -a /etc/fstab && \
+
 # clean up
 apt-get clean && \
 apt-get purge git python-dev gcc build-essential -y && \
-rm -rf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz aceproxy.zip get-pip.py
+rm -rf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz aceproxy.zip get-pip.py /opt/data/plugins/*
 
 # add local files
 COPY root/ /
