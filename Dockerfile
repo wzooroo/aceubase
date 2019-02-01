@@ -36,9 +36,9 @@ unzip aceproxy.zip && \
 apt-get clean && \
 rm -rf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz aceproxy.zip
 
-RUN chmod +x /opt/start.sh
+RUN chmod +x /usr/bin/start.sh
 
-CMD ["/opt/start.sh"]
+CMD ["/usr/bin/start.sh"]
 
 
 
