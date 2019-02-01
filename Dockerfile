@@ -16,11 +16,13 @@ apt-get install -y --no-install-recommends \
 python-setuptools \
 python-apsw \
 python-pip \
-pip install --upgrade psutil \
-pip install --upgrade gevent \
+python-libxslt1 \
+net-tools \
 wget \
 mc \
 nano && \
+pip install --upgrade psutil && \
+pip install --upgrade gevent && \
 apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
