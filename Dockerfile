@@ -13,6 +13,7 @@ apt-get install -y --no-install-recommends \
 python2.7 \
 build-essential \
 python-dev \
+libssl1.0.0 \
 unzip \
 gcc \
 curl \
@@ -44,7 +45,7 @@ unzip aceproxy.zip && \
 # clean up
 apt-get clean && \
 apt-get purge git python-dev gcc build-essential -y && \
-rm -rf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz aceproxy.zip
+rm -rf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz aceproxy.zip get-pip.py
 
 # add local files
 COPY root/ /
