@@ -36,6 +36,10 @@ mkdir -p /mnt/films && \
 cd /opt/ && \
 wget -o - http://acestream.org/downloads/linux-beta/acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz && \
 tar -zxvf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz && \
+cp /usr/lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /opt/lib/libcrypto.so.1.0.0 && \
+cp /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 /opt/lib/libcrypto.so.1.1 && \
+cp /usr/lib/x86_64-linux-gnu/libssl.so.1.0.0 /opt/lib/libssl.so.1.0.0 && \
+cp /usr/lib/x86_64-linux-gnu/libssl.so.1.1 /opt/lib/libssl.so.1.1 && \
 
 
 # install aceproxy
