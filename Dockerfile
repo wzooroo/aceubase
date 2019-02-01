@@ -16,6 +16,7 @@ apt-get install -y --no-install-recommends \
 python2.7 \
 build-essential \
 python-dev \
+unzip \
 gcc \
 curl \
 python-apsw \
