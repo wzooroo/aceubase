@@ -10,6 +10,7 @@ VOLUME /mnt/films/
 ADD src/ /root/
 
 # update apt and install dependencies
+RUN \
 apt-get update && apt-get upgrade -y && \
 apt-get install -y --no-install-recommends \
 python-pip \
