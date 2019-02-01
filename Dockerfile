@@ -6,9 +6,6 @@ EXPOSE 8621 62062 6878 8081
 # set config volume
 VOLUME /mnt/films/
 
-# Add required files that are local
-ADD src/ /root/
-
 # update apt and install dependencies
 RUN \
 apt-get update && apt-get upgrade -y && \
@@ -49,6 +46,8 @@ apt-get clean && \
 apt-get purge git python-dev gcc build-essential -y && \
 rm -rf acestream_3.1.35_ubuntu_18.04_x86_64.tar.gz aceproxy.zip
 
+# add local files
+COPY root/ /
 RUN chmod +x /opt/start.sh
 
 CMD ["/opt/start.sh"]
