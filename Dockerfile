@@ -51,7 +51,7 @@ RUN chmod +x /opt/start.sh
 
 WORKDIR /
 
-CMD ["/opt/start.sh"]
+#CMD ["/opt/start.sh"]
 
 
 
