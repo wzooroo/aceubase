@@ -50,9 +50,3 @@ COPY root/ /
 RUN chmod +x /opt/start.sh
 
 WORKDIR /
-
-#CMD ["/opt/start.sh"]
-
-
-
-
