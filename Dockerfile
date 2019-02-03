@@ -1,5 +1,7 @@
 FROM coresystem/acestream
 
+WORKDIR /tmp
+
 # set ports
 EXPOSE 8621 62062 6878 8081
 
@@ -8,7 +10,7 @@ VOLUME /mnt/films/
 
 # update apt and install dependencies
 RUN \
-apt-get update && apt-get upgrade -y && \
+apt-get update -y && \
 apt-get install -y --no-install-recommends \
 build-essential \
 python-dev \
@@ -36,16 +38,18 @@ cp /usr/lib/x86_64-linux-gnu/libssl.so.1.1 /opt/acestream/lib/libssl.so.1.1 && \
 
 # install aceproxy
 wget -o - https://github.com/pepsik-kiev/HTTPAceProxy/archive/master.zip -O aceproxy.zip && \
-unzip aceproxy.zip && \
+unzip aceproxy.zip -d /opt/ && \
 
 # clean up
 apt-get clean && \
 apt-get remove --purge python-dev gcc build-essential curl unzip -y && \
-rm -rf aceproxy.zip /opt/data/plugins/* start.sh
+rm -rf /tmp/* /opt/data/plugins/* /start.sh
 
 # add local files
 COPY root/ /
 RUN chmod +x /opt/start.sh
+
+WORKDIR /
 
 CMD ["/opt/start.sh"]
 
