@@ -42,26 +42,12 @@ password ='ReplaceMe'
 #### после редактирования
 ![aceu1a](https://user-images.githubusercontent.com/24189833/38780048-583d0820-40d1-11e8-9635-779b2afb618a.png)
 
-### Чистка кеш файлов старше чем 5 минут
-
-#### запустить в кроне:
-```
-crontab -e
-```
-#### добавить в низ это содержание:
-```
-0 */2 * * * find /tmp/state/.ACEStream/.acestream_cache/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
-0 */2 * * * find /tmp/state/.ACEStream/collected_torrent_files/* -depth -type f -mmin +5 -print0 | xargs -0 -r rm -f > /dev/null 2>&1
-```
-## Логи
-```
-http://ip::9903/logtail/acestream # аналог в терминале tail -f -n 0 /var/log/supervisor/acestream.log
-http://ip::9903/logtail/acehttp # аналог в терминале tail -f -n 0 /var/log/supervisor/acehttp.log
-```
 ## Опционально
 редактируем следующее:
-* root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrenttv.py
-* root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
+```
+nano /opt/HTTPAceProxy-master/plugins/config/torrenttv.py
+nano /opt/HTTPAceProxy-master/plugins/config/torrentfilms.py
+```
 ### Для получения плейлиста, используйте ссылки вида:
 * http://ip:8000/torrenttv
 * http://ip:8000/torrenttv/playlist.m3u
