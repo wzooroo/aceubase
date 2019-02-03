@@ -21,7 +21,6 @@ python-libxslt1 \
 wget \
 mc \
 nano && \
-apt autoremove -y && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
 rm -rf get-pip.py && \
@@ -42,6 +41,7 @@ unzip aceproxy.zip -d /opt/ && \
 
 # clean up
 apt-get clean && \
+apt autoremove -y && \
 apt-get remove --purge python-dev gcc build-essential curl unzip -y && \
 rm -rf /tmp/* /opt/data/plugins/* /start.sh
 
