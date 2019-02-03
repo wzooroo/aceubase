@@ -35,7 +35,7 @@ password ='ReplaceMe'
 ### Полная совместимость и поддержка офф. виджета ттв
 ### Для получения плейлиста, используйте ссылки вида:
 * http://ip:8000/channels/?type=m3u
-* http://ip:8000/archive/dates/?days=1 #(требуется доустановить ffmpeg)
+* http://ip:8000/archive/dates/?days=1 
 #### после редактирования
 ![aceu1a](https://user-images.githubusercontent.com/24189833/38780048-583d0820-40d1-11e8-9635-779b2afb618a.png)
 
