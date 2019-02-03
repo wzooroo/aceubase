@@ -43,7 +43,7 @@ unzip aceproxy.zip -d /opt/ && \
 apt-get clean && \
 apt-get remove --purge python-dev gcc build-essential curl unzip -y && \
 apt autoremove -y && \
-rm -rf /tmp/* /opt/data/plugins/* /start.sh
+rm -rf /tmp/* /start.sh
 
 # add local files
 COPY root/ /
