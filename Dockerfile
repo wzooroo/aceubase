@@ -25,12 +25,12 @@ wget \
 mc \
 git \
 nano && \
+apt autoremove -y && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
 rm -rf get-pip.py && \
 pip install --upgrade psutil && \
 pip install setuptools cffi 'cython>=0.28' git+git://github.com/gevent/gevent.git#egg=gevent && \
-apt-get autoremove -y && \
 mkdir -p /mnt/films && \
 
 #acestream
