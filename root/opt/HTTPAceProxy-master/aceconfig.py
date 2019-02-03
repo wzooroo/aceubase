@@ -9,7 +9,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     # ----------------------------------------------------
     #
     # Spawn Ace Stream Engine automatically
-    acespawn = True
+    acespawn = False
     # Ace Stream cmd line (use `--log-file filepath` to write log)
     # You need to set it only on Linux based systems. Autodetect for Windows!
     acecmd = '/opt/start-engine --client-console @/opt/acestream.conf --bind-all --cache-dir /tmp/state/.ACEStream --state-dir /tmp/state/.ACEStream --access-token 666666 --vod-drop-max-age 120 --live-cache-type memory --vod-cache-type memory --live-buffer 25 --vod-buffer 10 --service-remote-access --stats-report-peers'
