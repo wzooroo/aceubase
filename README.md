@@ -10,9 +10,8 @@ Ace Stream – это медиа-платформа с децентрализо�
 docker exec -it <имя контейнера> /bin/bash
 ```
 #### редактируем следующее:
-* root@aceub:/# nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
-
-строчки 19 и 20
+##### nano /opt/HTTPAceProxy-master/plugins/config/p2pproxy.py
+строчки 
 ```
 #Insert your email on torrent-tv.ru here
 email = 're.place@me'
