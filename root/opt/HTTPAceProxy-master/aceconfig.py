@@ -12,7 +12,7 @@ class AceConfig(acedefconfig.AceDefConfig):
     acespawn = True
     # Ace Stream cmd line (use `--log-file filepath` to write log)
     # You need to set it only on Linux based systems. Autodetect for Windows!
-    acecmd = '/opt/start-engine --client-console @/opt/acestream.conf --bind-all --cache-dir /tmp/state/.ACEStream --state-dir /tmp/state/.ACEStream --access-token 666666 --service-remote-access --stats-report-peers'
+    acecmd = '/opt/start-engine --client-console @/opt/acestream.conf --bind-all --cache-dir /tmp/state/.ACEStream --state-dir /tmp/state/.ACEStream --access-token 666666 --vod-drop-max-age 120 --live-cache-type memory --vod-cache-type memory --live-buffer 25 --vod-buffer 10 --service-remote-access --stats-report-peers'
     # Ace Stream API key
     # You probably shouldn't touch this
     acekey = 'n51LvQoTlJzNGaFxseRK-uvnvX-sD4Vm5Axwmc4UcoD-jruxmKsuJaH0eVgE'
