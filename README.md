@@ -10,9 +10,6 @@ docker run -d --net=host --name=ace sybdata/aceubase bash -c "/opt/start.sh hhGH
 
 ### где:
    * 1800 - Время очистки кеша acestream в секундах (30 минут)
-   * TZ='timezone'
-
-
 
 ## Настройка HTTPAceProxy
 #### состояние из коробки
